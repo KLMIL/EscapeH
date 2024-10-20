@@ -1,15 +1,20 @@
 # [Escape H] : Unity Photon Project
-Unity Engine의 Photon을 활용한 2일 로컬 서버 멀티플레이 게임
+Unity Engine의 Photon을 활용한 2인 VR 멀티플레이 게임
 
 <br>
 
-## 개발 기간: 2022.01. ~ 2022.06. (20주)
+## 개발 기간
+2022.01. ~ 2022.06. (20주)
+
+<br>
 
 ## 참여 인원: 4인
-- 김우성(포톤 멀티플레이 개발)
-- 손성한(에셋)
+- 김우성(멀티플레이 환경 구축 및 구현된 기믹 통합)
+- 손성한(씬 디자인 및 스토리라인)
 - 김민준(버튼 기믹 개발)
-- 전현우(체스 기믹 개발)
+- 전현우(체스 기믹, 플레이어 캐릭터 개발)
+
+<br>
 
 ## 기술 스택
 - IDE: Unity 2019.4.37 lts
@@ -24,14 +29,23 @@ Unity Engine의 Photon을 활용한 2일 로컬 서버 멀티플레이 게임
   - Horror Sound Pack
   - Polygonmarker
 
+<br>
+
 ## 게임 이미지
 ![Image1](Demon/InGameImage1.png)
 ![Image2](Demon/InGameImage2.png)
 ![Image3](Demon/InGameImage3.png)
 ![Video1](Demon/InGameVideo.gif)
 
+### [[시연연상(소리O)](Demon/시연연상(소리O).mp4)]
+
+<br>
+
 ## 시스템 구성도
 ![UML](Demon/EscapeH_UML_IMG.png)
+### [UXF](Demon/EscapeH_UML.uxf)
+
+<br>
 
 ## 주요 코드
 
@@ -139,7 +153,9 @@ public class MenuManager : MonoBehaviour
 
 ```
 
+<br>
 
-
-
-## 기타사항
+## 비고
+- 다수의 VR기기가 주위에 있는 환경에서 접속이 어려운 문제. 유선 방식의 로컬 서버 멀티플레이 방식 고려. 
+- 특정 기능의 수행을 강조하기 위한 프로젝트이므로, 목적에 맞도록 게임의 시작과 종료의 흐름을 완성하는게 아닌 특정 기믹 하나만을 강조하는게 바람직함
+- 실행 환경에 따른 조작방법(개발환경에서는 키보드와 마우스 입력, 시연에서는 VR 입력)의 이분화 기능 추가 필요
