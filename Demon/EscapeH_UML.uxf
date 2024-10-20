@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>456</y>
+      <w>96</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>GameController
+--
+Instance: self;
+[Game State valriable]
+--
+-Awake();
+-Update();
+-GameEnd();
++GimicSuccess();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>420</y>
+      <w>102</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>Launcher
+--
+Instance: self;
+[ect variables]
+--
+Awake();
+-[Server Connect Func]
+-[Make Room Func]
+-[Game Start Func]
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>396</y>
+      <w>78</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>SceneChange
+--
+-OnTriggerEnter();
++NextScene();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>204</y>
+      <w>78</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>RoomManager
+--
+Instance: Self
+--
+-Awake();
++OnEnable();
++OnDisable();
+-OnSceneLoaded();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>330</y>
+      <w>66</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>RoomListItem
+--
+info: RoomInfo
+--
++SetUp();
++OnClick();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>312</x>
+      <y>330</y>
+      <w>90</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>PlayerListItem
+--
+player: Player;
+--
++SetUp();
++OnPlayerLeftRoom();
++OnLeftRoom();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>204</y>
+      <w>84</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>PlayerManager
+--
+PhotonView
+--
+-Awake();
+-Start();
+-CreateController();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>906</x>
+      <y>330</y>
+      <w>78</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>PlayerController
+--
+PhotonView
+--
+-Awake();
+-Start();
+-Teleport();
+-[STD move Func]
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1014</x>
+      <y>330</y>
+      <w>90</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>PlayerGroundCheck
+--
+PlayerController
+--
+-Awake();
+-OnTriggerEnter();
+-OnTriggerExit();
+-OnTriggerStay();
+[Same as Collision]
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>330</y>
+      <w>90</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>PlayerScaleChange
+--
+usualSize: vector3
+--
+-Start();
+-ChangeScale();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>516</y>
+      <w>102</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>NormalButtonController
+--
+[Button State Variables]
+--
++IsCorrectAnswer();
++OpenLock();
++pressButton();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>918</x>
+      <y>516</y>
+      <w>72</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>NormalButton
+--
+UnityEvent
+--
++OnClick();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>438</y>
+      <w>102</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>LockButtonController
+--
+[Button State Variables]
+--
++IsCorrectAnswer();
++OpenLock();
++rotateDial();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>918</x>
+      <y>438</y>
+      <w>72</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>LockButton
+--
+UnityEvent
+--
++Onclick();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>456</y>
+      <w>42</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>528</y>
+      <w>42</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>270</y>
+      <w>246</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>390.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>876</x>
+      <y>348</y>
+      <w>42</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>978</x>
+      <y>348</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>270</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;100.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>270</y>
+      <w>222</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;100.0;350.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>474</y>
+      <w>324</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>520.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>516</y>
+      <w>324</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>520.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>588</x>
+      <y>360</y>
+      <w>102</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>BackGroundScene
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>768</x>
+      <y>306</y>
+      <w>348</w>
+      <h>282</h>
+    </coordinates>
+    <panel_attributes>GameScene
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>174</x>
+      <y>300</y>
+      <w>336</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>MenuScene
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>528</y>
+      <w>66</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>UIButton
+--
++OnClick();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>534</y>
+      <w>36</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>186</x>
+      <y>522</y>
+      <w>66</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Menu
+--
++Open();
++Close();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>492</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>186</x>
+      <y>420</y>
+      <w>66</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>MenuManager
+--
+Instance: Self
+--
+-Awake();
+[Overload]
++OpenMenu();
++CloseMenu();
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>270</y>
+      <w>114</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;310.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>528</x>
+      <y>180</y>
+      <w>228</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>PhotonView
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>444</y>
+      <w>36</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>516</x>
+      <y>408</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Change Scene
+bg=cyan
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>696</x>
+      <y>408</y>
+      <w>66</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Change Scene
+bg=cyan
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
